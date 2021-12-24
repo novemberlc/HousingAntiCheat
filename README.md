@@ -1,0 +1,2 @@
+# Housecord
+Housecord is a Discord bot and Minecraft bot that work together to improve the Hypixel Housing experience. This is in very early development, and I would not recommend trying to use it for your Housing yet, as it is likely to break. Currently it has the capability to log into a Minecraft account, join a housing, and create a bridge between Hypixel housing and a Discord channel using Webhooks to allow users to communicate between a Housing world and Discord.
