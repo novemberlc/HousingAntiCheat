@@ -1,0 +1,23 @@
+{
+    "discord": {
+        "token": "discord bot token",
+        "clientId": "bot user id",
+        "guildId": "id of the server"
+    },
+    "minecraft": {
+        "email": "mojang/microsoft account email",
+        "pass": "mojang/microsoft account password",
+        "auth": "write either 'mojang' or 'microsoft', depending on your account type."
+    },
+    "bridge": {
+        "usebridge": "true or false, determines whether you want to use a discord-minecraft chat bridge for your housing",
+        "bridgeid": "id of the discord channel you want on the discord end of the bridge",
+        "webhookurl": "if you want to use a discord-minecraft chat bridge, you need to create a webhook in the bridge channel in your discord and copy the webhook url here"
+    },
+    "housing": {
+        "owner": "your minecraft username",
+        "usespawncoordinates": "true or false, determines whether you want to teleport your bot directly to a specified location upon entering the housing",
+        "spawncoords": "0 0 0",
+        "housingnumber": "1, 2, or 3. this determines the box that the bot will click to join your housing."
+    }
+}

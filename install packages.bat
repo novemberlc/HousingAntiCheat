@@ -1,0 +1,1 @@
+npm install fs axios discord.js mineflayer prismarine-viewer @discordjs/builders @discordjs/rest discord-api-types
