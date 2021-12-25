@@ -7,7 +7,8 @@
     "minecraft": {
         "email": "mojang/microsoft account email",
         "pass": "mojang/microsoft account password",
-        "auth": "write either 'mojang' or 'microsoft', depending on your account type."
+        "auth": "write either 'mojang' or 'microsoft', depending on your account type.",
+        "username": "username of your minecraft account"
     },
     "bridge": {
         "usebridge": "true or false, determines whether you want to use a discord-minecraft chat bridge for your housing",
@@ -19,5 +20,28 @@
         "usespawncoordinates": "true or false, determines whether you want to teleport your bot directly to a specified location upon entering the housing",
         "spawncoords": "0 0 0",
         "housingnumber": "1, 2, or 3. this determines the box that the bot will click to join your housing."
+    },
+    "parkour": {
+        "useparkour": "true or false, use for automatic banning of parkour cheaters and optional bridge features",
+        "bridge": {
+            "pinban": {
+                "enable": "true or false, pin ban means that illegitimate parkour messages can be pinned in the bridge channel to easily ban the cheater",
+                "pinbanroles": [ 
+                    "enter",
+                    "discord",
+                    "role",
+                    "ids"
+                ]
+            }
+        },
+        "autoban": {
+            "enable": "true or false, having as true will make the bot automatically ban players that are cheating",
+            "cheatingtime": "time, in minutes, that should be considered too fast to be legitimate."
+        }
+    },
+    "linking": {
+        "enable": "true or false, enables account linking between minecraft and discord. required for most staff features.",
+        "linkaccountchannel": "discord channel id for the account linking",
+        "expirytime": "the time, in minutes, that it takes for link code to expire"
     }
 }
