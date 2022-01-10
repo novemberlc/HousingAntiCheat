@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "rystical-hypixel-housing",
+  "private_key_id": "2bfde3d5dc8629cfab0d3818e5bf3891a58bf1fc",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC5B3ZYGFGmFOot\n/tPIgthoY3Ojr42Z3h8G4zX49cq0768i5nGFWoaiGzt9Sb26gOu+vgZp+Sv/zeeN\nDrChYUV6BGtdSzkUjOmMN8f0w8lmdZJu8jq8oI94exFsih9DSK6ZhaqgNHF963mQ\n2P3IGJ+Khrq1mMzaol14n+1Fx/A5a8Be7LkSu4Vv0TrMJijdndF2yRclNEIhgNRt\nWNw1Hhlcy5CvGCfZ2NEjInSEs0aa8NyRjz7FSqGrezqqsw3vpHDg5hbSPUl2ct/p\ncwmUClfbu3gJzl93Nh8Hm8pzVMYxPIN1f3Gh8vw8FDSTtPFVpkfduXicZOJrQRgN\nKqZw7t8JAgMBAAECggEAILacCtlJ3kZGXRl30jSoFFS5BlCshW7LJ4mWakzyqOjT\nmyUJHx2xPgn4i581Bztx8shgE+51BAYgkUTun6m2Aeu0G8uH7QU46YyXMsRG4HGb\nETiMf/sXQqLnorwM6PV5wTTrxOVgx3WRibWDsRQBaRmG+0JnvaQFSKVl6vd9lnkU\nlVa9JRLyVO4WQ9RIMlv0DA+2JxPUVsDAWRqtl0QgJ6P51vcmLfzJjwCvXhcQXfkO\nXF7H39N5+xzH20WnbMieki43ItkpAlcfQFqbwsnAa/jVoFBeJbGToZwjROirnPhd\nAoP+ZGJyGMWzgQ74+BP+a5ToCtG9oviS5AtyY9mUcQKBgQDaCIOv/2dP9XmsF8mo\nf1YCspdrO63uORTtr76CbQjwYpMnpaCKqARcLUhe817Viv2p/Y5t2nezhtMb2rtD\n8pSLHtDwtV4iaPJmZPAfCadQ33+nh5zOLPvu4z/HQTGtxOfjBzyqI5Ik+iHW1WFz\n+7YCcTWq/0lLyVFMUA6/dZsglQKBgQDZP7DZ+c8E2jKLz+ZulzwccpXLqmGZSpqg\nmKO5pcFZaXtBW6JRaP+o/uep6PGsLy5hGR1gu+lFcdAy9e+OBDgwSOGTO3cHKRJp\nqni00mxS+MJfyHlRWW8SwNUREdZf3DEOZNOmXedygWHd+xLGyizt9tYh+T5PRrUB\n68NzlGSjpQKBgG2Nza2HZb/1ljd0lG1H3k3ostC84f5LTErJ/a3HX7B5t3s6a9p/\n5gDy9+RN4R7ngeICd6iXF4JrgnQCignwP9dPmqj4WN5tYS82FLljvmCSjK//Ijku\nvUAhi5BxH6cyw1l972uGCA7waERsX1VJ6wB7Jf5P2+Jqu6DesSpey52pAoGBALIA\nFmYy4SUnppyZhkN8lJr2Y7fQ7VDNKK6HAjb9EdOxsnSVoQQ1FKyh1qyHmWQr8ENM\ncZ6tuG7W1vC6Q0JIQMWHIZQh99+dDmIXc/ksI+dDvPb/6i72KSTjbHAk/lHitysE\n/8ljTVyrl8VqjzLjujZrtX12m1AXLf3Z73XG00KlAoGBAMuXmLtHKQkMt3EGBSLZ\nL2hJpH/DSB9Op9e/CZR8lWNs+OD3habuLrCXxrzQkiA9p+dk2I6IS3GM/tJIc9jW\n07KCqtP80jIhHl2Yf5J7q3SfyJUQBWB/0k4uetslSVjYIDQNDul+agK8Hlz4+5xL\nTpmmwRvTdXEX8pvSoG0wVHwD\n-----END PRIVATE KEY-----\n",
+  "client_email": "nodejs@rystical-hypixel-housing.iam.gserviceaccount.com",
+  "client_id": "104760689490686763548",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/nodejs%40rystical-hypixel-housing.iam.gserviceaccount.com"
+}

@@ -45,6 +45,7 @@ bot.addChatPattern("chatMessage", /(.*)/)
 bot.addChatPattern("privateMessage", /^From (?:\[.*\] )?(.*): (.*)$/, { parse: true, repeat: true })
 bot.addChatPattern("parkour", /(.*) completed the parkour in ((.*):.*\..*)!/, { parse: true, repeat: true })
 bot.on('chat:chatMessage', (message) => {
+    if(message[0].startsWith("Now Playing")) return;
     console.log(message[0])
 })
 
@@ -67,7 +68,6 @@ if(config.bridge.usebridge == "true"){
         }
     });
     bot.on("chat:housing", (matches) => {
-        if(matches[0][0] === `Now playing`) return;
         if(matches[0][0] == bot.username) return;
         axios.post(config.bridge.webhookurl, {
             username: matches[0][0],
@@ -198,6 +198,42 @@ if(config.parkour.useparkour == "true") {
             }
         })
     }
+}
+
+if(config.parkour.skips.enable == "true" ) {
+    bot.on('chat:housing', (matches) => {
+        if(matches[0][1].startsWith('!skip')) {
+            let sql = 
+            `SELECT *
+            FROM skiprequests
+            WHERE discordid = '${interaction.user.id}'`;
+            playerdb.get(sql, (err, row) => {
+                if (!row){
+                    let sql = `INSERT INTO skip (username)
+                    VALUES('${matches[0][0]}')`;
+                    playerdb.run(sql, function(err) {
+                        if (err) {
+                            return console.error(err.message)
+                        }
+                        const embed = new discord.MessageEmbed()
+                            .setTitle(matches[0][0])
+                            .setDescription(matches[0][0] + ' requested a skip')
+                            .setColor('BLUE')
+                            .setFooter("Click the green button to assign yourself this skip.");
+                        const row = new discord.MessageActionRow()
+                        .addComponents(
+                            new discord.MessageButton()
+                                .setCustomId('skipassign')
+                                .setLabel('Assign Skip')
+                                .setStyle('SUCCESS')
+                        );
+                        client.channels.cache.get(config.parkour.skips.channel).send({ embeds: [ embed ] , components: [ row ] })
+                    })
+                    return;
+                }
+            })
+        }
+    })
 }
 
 client.on('interactionCreate', async interaction => {
