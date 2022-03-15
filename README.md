@@ -33,3 +33,6 @@ If you're using Linux, you probably know what you're doing, but if you don't, he
 
 ## Configuration
 Coming soon in the wiki
+
+## Usage
+Coming soon in the wiki
