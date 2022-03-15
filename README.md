@@ -17,7 +17,7 @@ Housecord is a Discord bot and Minecraft bot that work together to improve the H
 5. Click "Open PowerShell window here"
 6. Run `npm install` to install the required dependencies
 7. Make a copy of "config-template.json" and name it "config.json"
-8. Edit the config with your own information. A detailed description of the config can be found [here](ADD URL)
+8. Edit the config with your own information. A detailed description of the config can be found [here](https://github.com/unchilled/Housecord/wiki/Configuration)
 9. Run `node index.js` to start the Discord and Minecraft bots!
 
 ## Linux
