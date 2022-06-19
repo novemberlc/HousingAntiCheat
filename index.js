@@ -31,6 +31,8 @@ function getLogTime() {
     return `${logTime.getFullYear()}-${logTime.getMonth()}-${logTime.getDate()} ${logTime.getHours()}:${logTime.getMinutes()}:${logTime.getSeconds()}`
 }
 
+console.log(color.green(`[${getLogTime()}] Starting bots...`))
+
 bot.once('spawn', () => {
     bot.chat("/visit " + config.minecraft.ownername)
     setTimeout(function(){ 
@@ -56,7 +58,6 @@ bot.on('chat:parkour', (matches) => {
         .setImage("https://mc-heads.net/avatar/" + matches[0][0] + ".png")
         .setDescription(matches[0][0] + " was banned for having an illegitimate time of `" + matches[0][1] + "`");
         client.channels.cache.get(config.discord.logchannelid).send({ embeds: [embed] })
-        const logTime = new Date()
         console.log(color.blue(`[${getLogTime()}] ${matches[0][0]} was automatically banned for an illegitimate parkour time of ${matches[0][1]}`))
         logger.write(`[${getLogTime()}] ${matches[0][0]} was automatically banned for an illegitimate parkour time of ${matches[0][1]}\n`)
     }
