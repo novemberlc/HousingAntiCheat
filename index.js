@@ -1,9 +1,10 @@
 const discord = require('discord.js');
-const config = require('./config.json')
+const { DownloaderHelper } = require('node-downloader-helper');
+const fs = require('fs')
+const path = require('path');
 const myIntents = new discord.Intents();
 const mineflayer = require('mineflayer');
 const color = require('chalk')
-const fs = require('fs')
 const logger = fs.createWriteStream('log.txt', {
     flags: 'a'
 })
@@ -13,10 +14,25 @@ function getLogTime() {
     logTime = new Date()
     return `${logTime.getFullYear()}-${logTime.getMonth()}-${logTime.getDate()} ${logTime.getHours()}:${logTime.getMinutes()}:${logTime.getSeconds()}`
 }
-
+var config = '';
 var configPasses = false;
 
-if(config.minecraft.email !== "" && config.minecraft.ownername !== "" && config.minecraft.housingname !== "" && config.minecraft.auth !== "") configPasses = true;
+if (!fs.existsSync('./config.json')) {
+    console.log(color.red(`[${getLogTime()}] Configuration does not exist. A template has been generated for you.`))
+    logger.write(`[${getLogTime()}] Configuration does not exist. A template has been generated for you.\n`)
+    const dl = new DownloaderHelper('https://raw.githubusercontent.com/novemberlc/HousingAntiCheat/3df24ffc87ebdd655971a2cb03183c8ea4f7f695/config-template.json', __dirname)
+    dl.start().catch((err) => {
+        console.log(red(`[${getLogTime()}] Error Found: ${err}`))
+        logger.write(`[${getLogTime()}] Error Found: ${err}\n`)
+    })
+    dl.on('end', () => {
+        fs.rename('./config-template.json', './config.json', () => {})
+    })
+    fs.copyFile("config-template.json", "config.json", () => {})
+} else {
+    config = require('./config.json')
+    if(config.minecraft.email !== "" && config.minecraft.ownername !== "" && config.minecraft.housingname !== "" && config.minecraft.auth !== "") configPasses = true;
+}
 
 if (configPasses) {
     const client = new discord.Client({ intents: myIntents });
@@ -31,6 +47,7 @@ if (configPasses) {
     });
 
     console.log(color.green(`[${getLogTime()}] Starting bots...`))
+    logger.write(`[${getLogTime()}] Starting bots...\n`)
 
     bot.once('spawn', () => {
         bot.chat("/visit " + config.minecraft.ownername + " " + config.minecraft.housingname)
@@ -64,4 +81,10 @@ if (configPasses) {
     }
 } else {
     console.log(color.red(`[${getLogTime()}] Configuration was not set up correctly. Make sure to input all the required settings in config.json`))
+    logger.write(`[${getLogTime()}] Configuration was not set up correctly. Make sure to input all the required settings in config.json\n`)
+    console.log(color.red(`[${getLogTime()}] Program will exit in 10 seconds or when you press Ctrl + C`))
+    setTimeout(() => {
+        console.log(color.red(`[${getLogTime()}] Exiting`))
+        logger.write(`[${getLogTime()}] Exiting\n`)
+    },10000)
 }
