@@ -1,4 +1,5 @@
 const discord = require('discord.js');
+const { DownloaderHelper } = require('node-downloader-helper');
 const fs = require('fs')
 const path = require('path');
 const myIntents = new discord.Intents();
@@ -18,7 +19,15 @@ var configPasses = false;
 
 if (!fs.existsSync(path.join(path.dirname(process.execPath), './config.json'))) {
     console.log(color.red(`[${getLogTime()}] Configuration does not exist. A template has been generated for you.`))
-    logger.write(`[${getLogTime()}] Configuration does not exist. A template has been generated for you.`)
+    logger.write(`[${getLogTime()}] Configuration does not exist. A template has been generated for you.\n`)
+    const dl = new DownloaderHelper('https://raw.githubusercontent.com/novemberlc/HousingAntiCheat/3df24ffc87ebdd655971a2cb03183c8ea4f7f695/config-template.json', path.dirname(process.execPath))
+    dl.start().catch((err) => {
+        console.log(red(`[${getLogTime()}] Error Found: ${err}`))
+        logger.write(`[${getLogTime()}] Error Found: ${err}\n`)
+    })
+    dl.on('end', () => {
+        fs.rename( path.join(path.dirname(process.execPath), './config-template.json'), path.join(path.dirname(process.execPath), './config.json'), () => {})
+    })
     fs.copyFile("config-template.json", "config.json", () => {})
 } else {
     config = JSON.parse(fs.readFileSync(path.join(path.dirname(process.execPath), './config.json')))
@@ -38,7 +47,7 @@ if (configPasses) {
     });
 
     console.log(color.green(`[${getLogTime()}] Starting bots...`))
-    logger.write(`[${getLogTime()}] Starting bots...`)
+    logger.write(`[${getLogTime()}] Starting bots...\n`)
 
     bot.once('spawn', () => {
         bot.chat("/visit " + config.minecraft.ownername + " " + config.minecraft.housingname)
@@ -72,10 +81,10 @@ if (configPasses) {
     }
 } else {
     console.log(color.red(`[${getLogTime()}] Configuration was not set up correctly. Make sure to input all the required settings in config.json`))
-    logger.write(`[${getLogTime()}] Configuration was not set up correctly. Make sure to input all the required settings in config.json`)
+    logger.write(`[${getLogTime()}] Configuration was not set up correctly. Make sure to input all the required settings in config.json\n`)
     console.log(color.red(`[${getLogTime()}] Program will exit in 10 seconds or when you press Ctrl + C`))
     setTimeout(() => {
         console.log(color.red(`[${getLogTime()}] Exiting`))
-        logger.write(`[${getLogTime()}] Exiting`)
+        logger.write(`[${getLogTime()}] Exiting\n`)
     },10000)
 }
