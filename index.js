@@ -1,7 +1,6 @@
 const discord = require('discord.js');
 const fs = require('fs')
 const path = require('path');
-const config = JSON.parse(fs.readFileSync(path.join(path.dirname(process.execPath), './config.json')))
 const myIntents = new discord.Intents();
 const mineflayer = require('mineflayer');
 const color = require('chalk')
@@ -14,10 +13,17 @@ function getLogTime() {
     logTime = new Date()
     return `${logTime.getFullYear()}-${logTime.getMonth()}-${logTime.getDate()} ${logTime.getHours()}:${logTime.getMinutes()}:${logTime.getSeconds()}`
 }
-
+var config = '';
 var configPasses = false;
 
-if(config.minecraft.email !== "" && config.minecraft.ownername !== "" && config.minecraft.housingname !== "" && config.minecraft.auth !== "") configPasses = true;
+if (!fs.existsSync(path.join(path.dirname(process.execPath), './config.json'))) {
+    console.log(color.red(`[${getLogTime()}] Configuration does not exist. A template has been generated for you.`))
+    logger.write(`[${getLogTime()}] Configuration does not exist. A template has been generated for you.`)
+    fs.copyFile("config-template.json", "config.json", () => {})
+} else {
+    config = JSON.parse(fs.readFileSync(path.join(path.dirname(process.execPath), './config.json')))
+    if(config.minecraft.email !== "" && config.minecraft.ownername !== "" && config.minecraft.housingname !== "" && config.minecraft.auth !== "") configPasses = true;
+}
 
 if (configPasses) {
     const client = new discord.Client({ intents: myIntents });
@@ -32,6 +38,7 @@ if (configPasses) {
     });
 
     console.log(color.green(`[${getLogTime()}] Starting bots...`))
+    logger.write(`[${getLogTime()}] Starting bots...`)
 
     bot.once('spawn', () => {
         bot.chat("/visit " + config.minecraft.ownername + " " + config.minecraft.housingname)
@@ -65,4 +72,10 @@ if (configPasses) {
     }
 } else {
     console.log(color.red(`[${getLogTime()}] Configuration was not set up correctly. Make sure to input all the required settings in config.json`))
+    logger.write(`[${getLogTime()}] Configuration was not set up correctly. Make sure to input all the required settings in config.json`)
+    console.log(color.red(`[${getLogTime()}] Program will exit in 10 seconds or when you press Ctrl + C`))
+    setTimeout(() => {
+        console.log(color.red(`[${getLogTime()}] Exiting`))
+        logger.write(`[${getLogTime()}] Exiting`)
+    },10000)
 }
