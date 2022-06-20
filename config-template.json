@@ -4,7 +4,7 @@
         "pass": "",
         "auth": "microsoft or mojang",
         "ownername": "housing owner username",
-        "housingnumber": ""
+        "housingname": ""
     },
     "discord": {
         "enable": false,
