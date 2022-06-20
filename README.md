@@ -16,12 +16,10 @@ This project is in early development. The current version may be working, but is
 2. Download the .zip file containing the source code using the green "Code" dropdown and extract its contents.
 ![image](https://cdn.unchld.me/img/12xne.png)
 3. Open the folder
-4. Hold shift and right click in any blank space in the folder
-5. Click "Open PowerShell window here"
-6. Run `npm i` to install the required dependencies
+4. Double-click `setup.bat` and let it run.
 7. Make a copy of "config-template.json" and name it "config.json"
 8. Edit the config with your own information. A detailed description of the config can be found [here](https://github.com/novemberlc/HousingAntiCheat/wiki/Configuration)
-9. Run `node .` to start the Discord and Minecraft bots!
+9. Run `start.bat` to start the Discord and Minecraft bots!
 
 ## Linux
 If you're using Linux, you probably know what you're doing, but if you don't, here are the instructions. This segment will assume you're using a command line. You probably need sudo access.
