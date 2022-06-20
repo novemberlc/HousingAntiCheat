@@ -1,4 +1,4 @@
 @echo off
 title HousingAntiCheat
-node bot.js
+node index.js
 pause
