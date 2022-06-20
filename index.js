@@ -50,7 +50,9 @@ if (configPasses) {
     logger.write(`[${getLogTime()}] Starting bots...\n`)
 
     bot.once('spawn', () => {
-        bot.chat("/visit " + config.minecraft.ownername + " " + config.minecraft.housingname)
+        setTimeout(() => {
+            bot.chat("/visit " + config.minecraft.ownername + " " + config.minecraft.housingname)
+        }, 1000)
         console.log(color.green(`[${getLogTime()}] Minecraft bot is online`))
         logger.write(`[${getLogTime()}] Minecraft bot is online\n`)
     })
