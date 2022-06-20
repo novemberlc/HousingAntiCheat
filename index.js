@@ -1,10 +1,10 @@
 const discord = require('discord.js');
+const fs = require('fs')
 const path = require('path');
 const config = JSON.parse(fs.readFileSync(path.join(path.dirname(process.execPath), './config.json')))
 const myIntents = new discord.Intents();
 const mineflayer = require('mineflayer');
 const color = require('chalk')
-const fs = require('fs')
 const logger = fs.createWriteStream('log.txt', {
     flags: 'a'
 })
