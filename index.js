@@ -1,5 +1,6 @@
 const discord = require('discord.js');
-const config = require('./config.json')
+const path = require('path');
+const config = JSON.parse(fs.readFileSync(path.join(path.dirname(process.execPath), './config.json')))
 const myIntents = new discord.Intents();
 const mineflayer = require('mineflayer');
 const color = require('chalk')
