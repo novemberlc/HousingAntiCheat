@@ -20,6 +20,7 @@ This project is in early development. The current version may be working, but is
 7. Make a copy of "config-template.json" and name it "config.json"
 8. Edit the config with your own information. A detailed description of the config can be found [here](https://github.com/novemberlc/HousingAntiCheat/wiki/Configuration)
 9. Run `start.bat` to start the Discord and Minecraft bots!
+10. Log into Hypixel, and make sure you give your bot permission to ban players on your Housing.
 
 ## Linux
 If you're using Linux, you probably know what you're doing, but if you don't, here are the instructions. This segment will assume you're using a command line. You probably need sudo access.
@@ -31,6 +32,7 @@ If you're using Linux, you probably know what you're doing, but if you don't, he
  6. Copy the sample config to an actual one: `cp config-template.json config.json`
  7. Edit the config using your information. `nano config.json` or `vim config.json` (or any text editor of your choice)
  8. Run the bots! `node .`
+ 9. Log into Hypixel, and make sure you give your bot permission to ban players on your Housing.
 
 ## Configuration
 See a detailed walkthrough of the configuration [here](https://github.com/novemberlc/HousingAntiCheat/wiki/Configuration).
