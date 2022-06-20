@@ -1,47 +1,17 @@
 {
-    "discord": {
-        "token": "discord bot token",
-        "clientId": "bot user id",
-        "guildId": "id of the server"
-    },
     "minecraft": {
-        "email": "mojang/microsoft account email",
-        "pass": "mojang/microsoft account password",
-        "auth": "write either 'mojang' or 'microsoft', depending on your account type.",
-        "username": "username of your minecraft account"
+        "email": "",
+        "pass": "",
+        "auth": "microsoft or mojang",
+        "ownername": "housing owner username",
+        "housingnumber": ""
     },
-    "bridge": {
-        "usebridge": "true or false, determines whether you want to use a discord-minecraft chat bridge for your housing",
-        "bridgeid": "id of the discord channel you want on the discord end of the bridge",
-        "webhookurl": "if you want to use a discord-minecraft chat bridge, you need to create a webhook in the bridge channel in your discord and copy the webhook url here"
+    "discord": {
+        "enable": false,
+        "token": "",
+        "logchannelid": ""
     },
-    "housing": {
-        "owner": "your minecraft username",
-        "usespawncoordinates": "true or false, determines whether you want to teleport your bot directly to a specified location upon entering the housing",
-        "spawncoords": "0 0 0",
-        "housingnumber": "1, 2, or 3. this determines the box that the bot will click to join your housing."
-    },
-    "parkour": {
-        "useparkour": "true or false, use for automatic banning of parkour cheaters and optional bridge features",
-        "bridge": {
-            "pinban": {
-                "enable": "true or false, pin ban means that illegitimate parkour messages can be pinned in the bridge channel to easily ban the cheater",
-                "pinbanroles": [ 
-                    "enter",
-                    "discord",
-                    "role",
-                    "ids"
-                ]
-            }
-        },
-        "autoban": {
-            "enable": "true or false, having as true will make the bot automatically ban players that are cheating",
-            "cheatingtime": "time, in minutes, that should be considered too fast to be legitimate."
-        }
-    },
-    "linking": {
-        "enable": "true or false, enables account linking between minecraft and discord. required for most staff features.",
-        "linkaccountchannel": "discord channel id for the account linking",
-        "expirytime": "the time, in minutes, that it takes for link code to expire"
+    "anticheat": {
+        "autobantime": "3"
     }
 }
