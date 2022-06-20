@@ -20,11 +20,13 @@ const bot = mineflayer.createBot({
     auth: config.minecraft.auth
 });
 
+/*
 function joinHousing() {
     if(config.minecraft.housingnumber == 1) return bot.clickWindow(12, 0, 0);
     if(config.minecraft.housingnumber == 2) return bot.clickWindow(13, 0, 0);
     if(config.minecraft.housingnumber == 3) return bot.clickWindow(14, 0, 0);
 }
+*/
 
 function getLogTime() {
     logTime = new Date()
@@ -34,10 +36,10 @@ function getLogTime() {
 console.log(color.green(`[${getLogTime()}] Starting bots...`))
 
 bot.once('spawn', () => {
-    bot.chat("/visit " + config.minecraft.ownername)
-    setTimeout(function(){ 
-        joinHousing()
-    }, 1000)
+    bot.chat("/visit " + config.minecraft.ownername + " " + config.minecraft.housingname)
+    //setTimeout(function(){ 
+    //    joinHousing()
+    //}, 1000)
     console.log(color.green(`[${getLogTime()}] Minecraft bot is online`))
     logger.write(`[${getLogTime()}] Minecraft bot is online\n`)
 })
