@@ -16,6 +16,10 @@
     "discord.js": "^13.3.1",
     "fs": "^0.0.1-security",
     "mineflayer": "^3.11.2",
+<<<<<<< HEAD
     "path": "^0.12.7"
+=======
+    "node-downloader-helper": "^2.1.1"
+>>>>>>> 0d7a3ba2de1bd5d617927f54ba259b009a05bbca
   }
 }
