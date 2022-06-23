@@ -14,7 +14,7 @@ This project is in early development. The current version may be working, but is
 ## Windows EXE (recommended)
 1. Download the latest exe from [releases](https://github.com/novemberlc/HousingAntiCheat/releases).
 2. Put the exe in a folder on its own
-3. Double click the exe to run it. If you get a "Windows protected your computer" popup, click "More details" then "Run anyway". A config will be created for you.
+3. Double click the exe to run it. If you get a "Windows protected your PC" popup, click "More info" then "Run anyway". A config will be created for you.
 4. Edit the config as described [here](https://github.com/novemberlc/HousingAntiCheat/wiki/Configuration)
 5. Double click the exe to run your bot!
 
