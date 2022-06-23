@@ -17,35 +17,20 @@ function getLogTime() {
 var config = '';
 var configPasses = false;
 
-<<<<<<< HEAD
 if (!fs.existsSync(path.join(path.dirname(process.execPath), './config.json'))) {
     console.log(color.red(`[${getLogTime()}] Configuration does not exist. A template has been generated for you.`))
     logger.write(`[${getLogTime()}] Configuration does not exist. A template has been generated for you.\n`)
     const dl = new DownloaderHelper('https://raw.githubusercontent.com/novemberlc/HousingAntiCheat/3df24ffc87ebdd655971a2cb03183c8ea4f7f695/config-template.json', path.dirname(process.execPath))
-=======
-if (!fs.existsSync('./config.json')) {
-    console.log(color.red(`[${getLogTime()}] Configuration does not exist. A template has been generated for you.`))
-    logger.write(`[${getLogTime()}] Configuration does not exist. A template has been generated for you.\n`)
-    const dl = new DownloaderHelper('https://raw.githubusercontent.com/novemberlc/HousingAntiCheat/3df24ffc87ebdd655971a2cb03183c8ea4f7f695/config-template.json', __dirname)
->>>>>>> 0d7a3ba2de1bd5d617927f54ba259b009a05bbca
     dl.start().catch((err) => {
         console.log(red(`[${getLogTime()}] Error Found: ${err}`))
         logger.write(`[${getLogTime()}] Error Found: ${err}\n`)
     })
     dl.on('end', () => {
-<<<<<<< HEAD
         fs.rename( path.join(path.dirname(process.execPath), './config-template.json'), path.join(path.dirname(process.execPath), './config.json'), () => {})
     })
     fs.copyFile("config-template.json", "config.json", () => {})
 } else {
     config = JSON.parse(fs.readFileSync(path.join(path.dirname(process.execPath), './config.json')))
-=======
-        fs.rename('./config-template.json', './config.json', () => {})
-    })
-    fs.copyFile("config-template.json", "config.json", () => {})
-} else {
-    config = require('./config.json')
->>>>>>> 0d7a3ba2de1bd5d617927f54ba259b009a05bbca
     if(config.minecraft.email !== "" && config.minecraft.ownername !== "" && config.minecraft.housingname !== "" && config.minecraft.auth !== "") configPasses = true;
 }
 
