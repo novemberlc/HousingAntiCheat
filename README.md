@@ -13,7 +13,7 @@ This project is in early development. The current version may be working, but is
 
 ## Windows EXE (recommended)
 
-## Windows (non-exe with no CLI)
+## Windows (non-exe / no CLI)
 1. Install Node.js https://nodejs.org/en/
 2. Download the .zip file containing the source code using the green "Code" dropdown and extract its contents.
 ![image](https://cdn.unchld.me/img/12xne.png)
