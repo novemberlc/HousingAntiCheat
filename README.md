@@ -11,12 +11,19 @@ This project is in early development. The current version may be working, but is
  - Git (if using Linux)
  - A little bit of brain power
 
-## Windows (no CLI)
+## Windows EXE (recommended)
+1. Download the latest exe from [releases](https://github.com/novemberlc/HousingAntiCheat/releases).
+2. Put the exe in a folder on its own
+3. Double click the exe to run it. If you get a "Windows protected your PC" popup, click "More info", then "Run anyway". A config will be created for you.
+4. Edit the config as described [here](https://github.com/novemberlc/HousingAntiCheat/wiki/Configuration)
+5. Double click the exe to run your bot!
+
+## Windows (non-exe / no CLI)
 1. Install Node.js https://nodejs.org/en/
 2. Download the .zip file containing the source code using the green "Code" dropdown and extract its contents.
 ![image](https://cdn.unchld.me/img/12xne.png)
 3. Open the folder
-4. Double-click `setup.bat` and let it run. This installs the dependencies.
+4. Double-click `setup.bat` and let it run. This installs the dependencies. If you get a "Windows protected your PC" popup, click "More info", then "Run anyway".
 7. Make a copy of "config-template.json" and name it "config.json"
 8. Edit the config with your own information. A detailed description of the config can be found [here](https://github.com/novemberlc/HousingAntiCheat/wiki/Configuration)
 9. Run `start.bat` to start the Discord and Minecraft bots!
