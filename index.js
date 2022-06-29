@@ -17,12 +17,18 @@ function getLogTime() {
 var config = '';
 var configPasses = false;
 
+console.log(color.blue(`[${getLogTime()}] HousingAntiCheat v1.0.0`))
+console.log(color.blue(`[${getLogTime()}] Developed by unchilled and novemberlc`))
+console.log(color.blue(`[${getLogTime()}] https://github.com/novemberlc/HousingAntiCheat`))
+console.log(color.blue(`[${getLogTime()}] https://unchilled.dev/`))
+
+
 if (!fs.existsSync('./config.json')) {
     console.log(color.red(`[${getLogTime()}] Configuration does not exist. A template has been generated for you.`))
     logger.write(`[${getLogTime()}] Configuration does not exist. A template has been generated for you.\n`)
     const dl = new DownloaderHelper('https://raw.githubusercontent.com/novemberlc/HousingAntiCheat/3df24ffc87ebdd655971a2cb03183c8ea4f7f695/config-template.json', __dirname)
     dl.start().catch((err) => {
-        console.log(red(`[${getLogTime()}] Error Found: ${err}`))
+        console.log(color.red(`[${getLogTime()}] Error Found: ${err}`))
         logger.write(`[${getLogTime()}] Error Found: ${err}\n`)
     })
     dl.on('end', () => {
