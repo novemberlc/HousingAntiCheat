@@ -23,7 +23,7 @@ This project is in early development. The current version may be working, but is
 1. Install Node.js https://nodejs.org/en/
 2. Download the .zip file containing the source code using the green "Code" dropdown and extract its contents.
    <img src="https://cdn.unchld.me/img/12xne.png" alt="zip donwnload" width="400"/>
-3. Open the folder
+3. Open the extracted folder
 4. Double-click `setup.bat` and let it run. This installs the dependencies. If you get a "Windows protected your PC" popup, click "More info", then "Run anyway".
 7. Make a copy of "config-template.json" and name it "config.json"
 8. Edit the config with your own information. A detailed description of the config can be found [here](https://github.com/novemberlc/HousingAntiCheat/wiki/Configuration)
