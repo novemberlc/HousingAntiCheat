@@ -36,7 +36,7 @@ If you're using Linux, you probably know what you're doing, but if you don't, he
  2. Install git, if not already installed. `sudo apt install git-all` for Debian based distros.
  3. Clone the repo. Make sure you're in a directory you want it to be in, then: `git clone https://github.com/novemberlc/HousingAntiCheat.git`
  4. `cd HousingAntiCheat`
- 5. Install the dependencies: `npm install`
+ 5. Install the dependencies: `npm ci`
  6. Copy the sample config to an actual one: `cp config-template.json config.json`
  7. Edit the config using your information. `nano config.json` or `vim config.json` (or any text editor of your choice)
  8. Run the bots! `node .`
