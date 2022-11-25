@@ -38,7 +38,7 @@ If you're using Linux, you probably know what you're doing, but if you don't, he
  4. `cd HousingAntiCheat`
  5. Install the dependencies: `npm ci`
  6. Copy the sample config to an actual one: `cp config-template.json config.json`
- 7. Edit the config using your information. `nano config.json` or `vim config.json` (or any text editor of your choice)
+ 7. Edit the config using your information. `nano config.json` (or any text editor of your choice)
  8. Run the bots! `node .`
  9. Log into Hypixel and make sure you give your bot permission to ban players on your Housing.
 
