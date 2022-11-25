@@ -11,7 +11,7 @@ This project is in early development. The current version may be working, but is
  - Git (if using Linux)
  - A little bit of brain power
 
-## Windows EXE (recommended)
+## Windows EXE (easiest for non-technical users)
 **Warning: It's not a good idea to run random EXEs. You have no idea what could be on them. This one only contains what's on this repository, but please exercise extreme caution when running random EXEs on the internet.**
 1. Download the latest exe from [releases](https://github.com/novemberlc/HousingAntiCheat/releases).
 2. Put the exe in a folder on its own
